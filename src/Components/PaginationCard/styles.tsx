@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        marginTop: 70,
+        marginTop: 80,
         backgroundColor: "#26273A",
         width: '100%',
         padding: 5,
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
         width: 60, height: 60,
     },
     lista: {
-        flex: 1
+        flex: 1,
     }
 
 });

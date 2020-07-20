@@ -1,3 +1,31 @@
+import {StyleSheet} from "react-native";
+
+const styles = StyleSheet.create({
+    container: {
+        borderWidth: 4,
+        borderColor: '#20232a',
+        borderRadius: 10,
+        marginTop: 10,
+        marginBottom: 10,
+        width: '50%',
+        height: 200,
+        backgroundColor: '#26273a',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderStyle: 'solid',
+    },
+    tinyLogo: {
+        width: 100,
+        height: 100,
+        padding: 10,
+    }, pokemon: {
+        fontSize: 16,
+        fontStyle: "italic",
+        color: '#FFFFFF',
+        fontFamily: "Roboto",
+    }
+});
+export default styles;
 // import styled from 'styled-components';
 // import ElementTypes from '../../utils/elementsTypes';
 //
