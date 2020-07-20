@@ -19,10 +19,11 @@ const styles = StyleSheet.create({
         height: 100,
         padding: 10,
     }, pokemon: {
-        fontSize: 16,
+        fontSize: 32,
         fontStyle: "italic",
         color: '#FFFFFF',
         fontFamily: "Roboto",
+        textTransform: 'capitalize'
     }
 });
 export default styles;
