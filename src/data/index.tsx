@@ -1,21 +1,83 @@
-const DATA = [
-    {"id": "1", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/807.png"},
-    {"id": "2", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/806.png"},
-    {"id": "3", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/805.png"},
-    {"id": "4", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/804.png"},
-    {"id": "5", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/803.png"},
-    {"id": "6", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/802.png"},
-    {"id": "7", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/801.png"},
-    {"id": "8", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/800.png"},
-    {"id": "9", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/799.png"},
-    {"id": "10", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/798.png"},
-    {"id": "11", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/797.png"},
-    {"id": "12", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/796.png"},
-    {"id": "13", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/795.png"},
-    {"id": "14", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/794.png"},
-    {"id": "15", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/793.png"},
-    {"id": "16", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/792.png"},
-    {"id": "17", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/791.png"},
-    {"id": "18", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/790.png"}];
+import {apiV2} from '../services/api';
 
-export default DATA;
+async function pokemons(resource: string) {
+    return await (await apiV2.get(resource)).data;
+}
+
+const DATA = [
+    {
+        "name": "zeraora",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/807.png"
+    },
+    {
+        "name": "blacephalon",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/806.png"
+    },
+    {
+        "name": "stakataka",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/805.png"
+    },
+    {
+        "name": "naganadel",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/804.png"
+    },
+    {
+        "name": "poipole",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/803.png"
+    },
+    {
+        "name": "marshadow",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/802.png"
+    },
+    {
+        "name": "magearna",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/801.png"
+    },
+    {
+        "name": "necrozma",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/800.png"
+    },
+    {
+        "name": "guzzlord",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/799.png"
+    },
+    {
+        "name": "kartana",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/798.png"
+    },
+    {
+        "name": "celesteela",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/797.png"
+    },
+    {
+        "name": "xurkitree",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/796.png"
+    },
+    {
+        "name": "pheromosa",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/795.png"
+    },
+    {
+        "name": "buzzwole",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/794.png"
+    },
+    {
+        "name": "nihilego",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/793.png"
+    },
+    {"name": "lunala", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/792.png"},
+    {
+        "name": "solgaleo",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/791.png"
+    },
+    {
+        "name": "cosmoem",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/790.png"
+    },
+    {"name": "cosmog", "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/789.png"},
+    {
+        "name": "tapu-fini",
+        "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/788.png"
+    }];
+
+export {DATA, pokemons};

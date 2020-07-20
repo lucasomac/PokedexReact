@@ -7,8 +7,8 @@ import Details from "../Components/Details";
 
 const Stack = createStackNavigator();
 const ScreenStyles = {
-    headerTintColor: "#000",
-    headerStyle: {backgroundColor: "#71718181"},
+    // headerTintColor: "#000",
+    // headerStyle: {backgroundColor: "#71718181"},
 
 };
 

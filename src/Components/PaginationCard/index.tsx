@@ -2,9 +2,10 @@ import React from "react";
 import {FlatList, Image, TextInput, TouchableOpacity, View} from "react-native";
 import Card from "../Card";
 import styles from "./styles";
-import DATA from "../../data";
+import {DATA} from "../../data";
 
 export default function PaginationCard() {
+    // let pokes = await pokemons('pokemon');
     return (
         <>
             <View style={styles.searchForm}>
@@ -23,12 +24,10 @@ export default function PaginationCard() {
                 <FlatList
                     style={styles.lista}
                     data={DATA}
-                    renderItem={({item}) => <Card uri={item.uri}/>}
-                    keyExtractor={item => item.id}
+                    renderItem={({item}) => (<Card uri={item.uri} pokemon={item.name}/>)}
+                    keyExtractor={item => item.name}
                     numColumns={2}
-                    horizontal={false}
-                />
+                    horizontal={false}/>
             </View>
-        </>
-    );
+        </>);
 }
