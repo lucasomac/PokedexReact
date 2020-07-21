@@ -16,8 +16,9 @@ function Routes() {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={ScreenStyles}>
-                <Stack.Screen name="Pokédex" component={PaginationCard}/>
                 <Stack.Screen name="Pokemon" component={Pokemon}/>
+                <Stack.Screen name="Pokédex" component={PaginationCard}/>
+
             </Stack.Navigator>
         </NavigationContainer>
     );

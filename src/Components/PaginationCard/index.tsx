@@ -5,8 +5,9 @@ import styles from "./styles";
 import {DATA} from "../../data";
 
 export default class PaginationCard extends React.Component {
+    // pokes = await pokemons();
+
     render() {
-        // let pokes = await pokemons('pokemon');
         return (
             <>
                 <View style={styles.searchForm}>
@@ -21,6 +22,15 @@ export default class PaginationCard extends React.Component {
                         <Image source={require('../../images/pokebola_button.png')} style={styles.poekbola}/>
                     </TouchableOpacity>
                 </View>
+                {/*<View style={styles.container}>*/}
+                {/*    <FlatList*/}
+                {/*        style={styles.lista}*/}
+                {/*        data={[this.pokes]}*/}
+                {/*        renderItem={({item}) => (<Card uri={item.url} pokemon={item.name}/>)}*/}
+                {/*        keyExtractor={item => item.name}*/}
+                {/*        numColumns={2}*/}
+                {/*        horizontal={false}/>*/}
+                {/*</View>*/}
                 <View style={styles.container}>
                     <FlatList
                         style={styles.lista}

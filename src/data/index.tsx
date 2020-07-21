@@ -86,4 +86,4 @@ const DATA = [
         "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/788.png"
     }];
 
-export {DATA, pokemons};
+export {DATA, pokemons, pokemon};
