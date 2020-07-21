@@ -1,11 +1,13 @@
-import {apiV2} from '../services/api';
+import {apiV1, apiV2} from '../services/api';
 
-async function pokemons() {
-    let dados = await apiV2.get('pokemon');
-    return dados.data['results'];
+async function getPokemons() {
+    // let dados =
+    // return await apiV2.get('pokemon');
+    return await apiV1.get('pokemon_names.json');
+    // return dados.data['results'];
 }
 
-async function pokemon(search: string) {
+async function getPokemon(search: string) {
     let pokemon = await apiV2.get(`pokemon/${search}`);
     return pokemon.data;
 }
@@ -86,4 +88,4 @@ const DATA = [
         "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/788.png"
     }];
 
-export {DATA, pokemons, pokemon};
+export {DATA, getPokemons, getPokemon};
