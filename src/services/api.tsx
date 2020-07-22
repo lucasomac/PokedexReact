@@ -6,7 +6,7 @@ const apiV1 = axios.create({
 
 const apiV2 = axios.create({
     baseURL: 'https://pokeapi.co/api/v2/',
-    responseType: 'json'
+    responseType: 'json',
 });
 
 /* V1

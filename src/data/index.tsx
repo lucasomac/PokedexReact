@@ -1,15 +1,11 @@
-import {apiV1, apiV2} from '../services/api';
+import {apiV2} from '../services/api';
 
 async function getPokemons() {
-    // let dados =
-    // return await apiV2.get('pokemon');
-    return await apiV1.get('pokemon_names.json');
-    // return dados.data['results'];
+    return await apiV2.get('pokemon');
 }
 
 async function getPokemon(search: string) {
-    let pokemon = await apiV2.get(`pokemon/${search}`);
-    return pokemon.data;
+    return await apiV2.get(`pokemon/${search}`);
 }
 
 const DATA = [
