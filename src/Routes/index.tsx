@@ -3,7 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import 'react-native-gesture-handler';
 import PaginationCard from "../Components/PaginationCard";
-import Pokemon from "../Components/Pokemon";
+import PokemonPage from "../Components/PokemonPage";
 
 const Stack = createStackNavigator();
 const ScreenStyles = {
@@ -16,7 +16,7 @@ function Routes() {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={ScreenStyles}>
-                <Stack.Screen name="Pokemon" component={Pokemon}/>
+                <Stack.Screen name="Pokemon" component={PokemonPage}/>
                 <Stack.Screen name="Pokédex" component={PaginationCard}/>
 
             </Stack.Navigator>
