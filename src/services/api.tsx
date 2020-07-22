@@ -1,12 +1,17 @@
-import axios from 'axios'
+import axios from 'axios';
+import qs from 'qs';
 
 const apiV1 = axios.create({
-    baseURL: 'https://pogoapi.net/api/v1/'
+    baseURL: 'https://pogoapi.net/api/v1'
 });
 
 const apiV2 = axios.create({
-    baseURL: 'https://pokeapi.co/api/v2/',
+    baseURL: 'https://pokeapi.co/api/v2',
     responseType: 'json',
+    paramsSerializer: function (params) {
+        console.log(params);
+        return qs.stringify(params, {arrayFormat: 'brackets'});
+    }
 });
 
 /* V1
