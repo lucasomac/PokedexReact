@@ -9,7 +9,7 @@ export default function PokemonPage(pokemon: Pokemon) {
     var [pokemons, setPokemons] = useState([]);
     console.info(`O tamanho inicial é: ${pokemons.length}`);
     useEffect(() => {
-        getPokemons().then(response => {
+        getPokemons({params: {}}).then(response => {
             setPokemons(response.data.results);
         });
         // async function loadPokemons() {
@@ -24,10 +24,7 @@ export default function PokemonPage(pokemon: Pokemon) {
             console.log('O nome do pokemon é--> ' + element.name);
             console.log('A url do pokemon é--> ' + element.url);
         }
-    )
-    ;
-
-    // console.log(pokemons[2]);
+    );
     const {url, name} = pokemons[2];
     return (
         <View style={styles.container}>

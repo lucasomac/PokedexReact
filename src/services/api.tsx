@@ -9,7 +9,6 @@ const apiV2 = axios.create({
     baseURL: 'https://pokeapi.co/api/v2',
     responseType: 'json',
     paramsSerializer: function (params) {
-        console.log(params);
         return qs.stringify(params, {arrayFormat: 'brackets'});
     }
 });

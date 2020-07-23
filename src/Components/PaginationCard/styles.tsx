@@ -52,6 +52,10 @@ const styles = StyleSheet.create({
     },
     lista: {
         flex: 1,
+    },
+    loading: {
+        alignSelf: 'center',
+        marginVertical: 20,
     }
 
 });
