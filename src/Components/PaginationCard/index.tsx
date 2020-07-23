@@ -22,8 +22,11 @@ export default function PaginationCard() {
         }
         setLoading(true);
         const response = (await getPokemons({offset, limit}));
-        setPokemons([...pokemons, ...response.data.results]);
-        setTotalPokemons(totalPokemons + response.data.results.length);
+        const {results} = response.data;
+        setPokemons(pokemons + results);
+        console.log(pokemons.length);
+        setTotalPokemons(totalPokemons + results.length);
+        console.log(totalPokemons)
         setOffset(offset + limit);
         console.log(offset)
         setLoading(false)
