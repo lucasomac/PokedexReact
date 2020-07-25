@@ -10,9 +10,12 @@ async function getPokemon(search: string) {
     return await apiV2.get(`pokemon/${search}`);
 }
 
-async function getPokemonImage(search: string) {
-    let retorno = await apiV2.get(`pokemon/${search}`);
-    return retorno.data.sprites;
+async function getPokemonId(search: string) {
+    return await (await apiV2.get(`pokemon/${search}`)).data.id;
+}
+
+function getPokemonImage(id: string, size: string) {
+    return `https://assets.pokemon.com/assets/cms2/img/pokedex/${size}/${id}.png`;
 }
 
 const DATA = [
@@ -91,4 +94,4 @@ const DATA = [
         "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/788.png"
     }];
 
-export {DATA, getPokemons, getPokemon};
+export {DATA, getPokemons, getPokemon, getPokemonId, getPokemonImage};

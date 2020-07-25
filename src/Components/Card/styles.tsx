@@ -17,9 +17,10 @@ const styles = StyleSheet.create({
     tinyLogo: {
         width: 100,
         height: 100,
-        padding: 10,
-    }, pokemon: {
-        fontSize: 32,
+    },
+    pokemon: {
+        textAlign: 'center',
+        fontSize: 30,
         fontStyle: "italic",
         color: '#FFFFFF',
         fontFamily: "Roboto",
